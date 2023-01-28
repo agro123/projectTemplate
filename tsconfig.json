@@ -22,7 +22,7 @@
         "@navigation/*": ["/app/navigation/*"],
         "@components/*": ["/components/*"],
         "@theme/*": ["assets/theme/*"],
-        "@i18n/*": ["config/i18n/*"],
+        "@localization/*": ["config/localization/*"],
         "@interface/*": ["config/interface/*"],
       },
     },

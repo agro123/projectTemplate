@@ -16,7 +16,7 @@ module.exports = {
           '@navigation': './src/app/navigation',
           '@components': './src/components',
           '@theme': './src/assets/theme',
-          '@i18n': './src/config/i18n',
+          '@localization': './src/config/localization',
           '@interface': './src/config/interface',
         },
       },
