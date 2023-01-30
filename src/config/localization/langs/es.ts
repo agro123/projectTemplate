@@ -5,9 +5,7 @@ const common = {
   NO: 'No',
 };
 
-let words = {
+export default {
   ...common,
   ...template,
 };
-
-export default words;

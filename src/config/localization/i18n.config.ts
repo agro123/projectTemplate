@@ -4,10 +4,10 @@ import lenguages from './langs';
 
 i18n.use(initReactI18next).init({
   lng: 'es',
-  fallbackLng: 'en',
+  fallbackLng: ['en', 'es'],
   compatibilityJSON: 'v3',
-  ns: ['translationsNS'], //
-  defaultNS: 'translationsNS', //
+  ns: ['translationsNS'],
+  defaultNS: 'translationsNS',
   debug: false,
   keySeparator: false,
   interpolation: {
@@ -15,7 +15,6 @@ i18n.use(initReactI18next).init({
   },
   resources: lenguages,
 });
-
 export default i18n;
 
 /**

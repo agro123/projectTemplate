@@ -12,11 +12,11 @@ import localization from '@localization/i18n.config';
 function App(): JSX.Element {
   return (
     <Provider store={store}>
-      <I18nextProvider i18n={localization}>
-        <NavigationContainer ref={navigationRef}>
+      <NavigationContainer ref={navigationRef}>
+        <I18nextProvider i18n={localization}>
           <StackNavigation />
-        </NavigationContainer>
-      </I18nextProvider>
+        </I18nextProvider>
+      </NavigationContainer>
     </Provider>
   );
 }
