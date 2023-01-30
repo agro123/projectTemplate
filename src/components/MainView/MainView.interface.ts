@@ -2,6 +2,6 @@ import React from 'react';
 
 export interface MainViewProps {
   backgroundColor?: string;
-  children: React.ReactElement;
+  children: React.ReactNode;
   loading?: boolean;
 }
