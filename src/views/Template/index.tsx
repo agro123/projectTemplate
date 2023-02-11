@@ -9,6 +9,7 @@ import {
   ButtonLinear,
   CheckBox,
   CodeInput,
+  Collapsible,
 } from 'components';
 import {PropsScreen} from 'config/interfaces/general.interface';
 import useStyles from './styles';
@@ -76,6 +77,12 @@ const Template: React.FC<PropsScreen> = props => {
         <View style={[styles.section]}>
           <Text style={Fonts.h2}>{'<CodeInput />'}</Text>
           <CodeInput numberOfDigits={6} onChange={v => console.log(v)} />
+        </View>
+        <View style={[styles.section]}>
+          <Text style={Fonts.h2}>{'<Collapsible />'}</Text>
+          <Collapsible title="Collapsible">
+            <Text>Hello</Text>
+          </Collapsible>
         </View>
       </ScrollView>
     </MainView>
