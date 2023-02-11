@@ -1,6 +1,8 @@
 const debug = true;
-export const API = debug ? 'API DEV' : 'API PROD';
+export const DEV = 'API DEV';
+export const PROD = 'API PROD';
+export const API = debug ? DEV : PROD;
 
-export const endPoint = {
+export const ENDPOINTS = {
   ENDPOINT: '',
 };

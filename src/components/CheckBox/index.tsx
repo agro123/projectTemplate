@@ -16,24 +16,43 @@ interface Props {
   text?: string;
   testID?: string;
   value: boolean;
+  radio?: boolean;
   onPress: (isChecked: boolean) => void;
   textNode?: React.ReactNode;
 }
 
-const CustomCheckBox: React.FC<Props> = props => {
+const CheckBox: React.FC<Props> = props => {
   const styles = useStyles(Colors);
-  const {text, onPress, disabled, value, testID, textNode, mt, mv, size} =
-    props;
-  const [checked, setChecked] = useState(value);
+  const {
+    text,
+    onPress,
+    disabled,
+    value,
+    testID,
+    textNode,
+    mt,
+    mv,
+    size,
+    radio,
+  } = props;
+  //const [checked, setChecked] = useState(value);
 
   const propStyles = useMemo(
     () => ({marginTop: mt, marginVertical: mv}),
     [mv, mt],
   );
+  const newSize = size
+    ? {
+        width: size,
+        height: size,
+      }
+    : null;
+
+  const radioStyle = radio ? {borderRadius: 50} : null;
 
   const onCheck = () => {
-    setChecked(!checked);
-    onPress(!checked);
+    //setChecked(!checked);
+    onPress(!value);
   };
   return (
     <Pressable
@@ -54,16 +73,10 @@ const CustomCheckBox: React.FC<Props> = props => {
       /> */}
       <View
         style={[
-          disabled
-            ? styles.disabled
-            : checked
-            ? styles.checked
-            : styles.unCheck,
+          disabled ? styles.disabled : value ? styles.checked : styles.unCheck,
           styles.checkBox,
-          {
-            width: size,
-            height: size,
-          },
+          newSize,
+          radioStyle,
         ]}
       />
       <View style={{width: '90%'}}>
@@ -74,4 +87,4 @@ const CustomCheckBox: React.FC<Props> = props => {
   );
 };
 
-export default CustomCheckBox;
+export default CheckBox;

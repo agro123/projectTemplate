@@ -56,8 +56,14 @@ const Template: React.FC<PropsScreen> = props => {
         <View style={[styles.section, {height: 300}]}>
           <Text style={Fonts.h2}>{'<CheckBox />'}</Text>
           <CheckBox
-            text="check me!"
+            text="Check me!"
             value={checked}
+            onPress={value => setChecked(value)}
+          />
+          <CheckBox
+            text="Check me!"
+            value={checked}
+            radio
             onPress={value => setChecked(value)}
           />
         </View>
