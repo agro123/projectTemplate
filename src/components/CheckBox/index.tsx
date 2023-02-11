@@ -1,4 +1,4 @@
-import React, {useMemo, useState} from 'react';
+import React, {useMemo} from 'react';
 
 import {Pressable, Text, View} from 'react-native';
 import useStyles from './styles';

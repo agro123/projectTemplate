@@ -3,7 +3,13 @@ import {ScrollView, Text, View} from 'react-native';
 
 import {useTranslation} from 'react-i18next';
 
-import {MainView, Carousel, ButtonLinear, CheckBox} from 'components';
+import {
+  MainView,
+  Carousel,
+  ButtonLinear,
+  CheckBox,
+  CodeInput,
+} from 'components';
 import {PropsScreen} from 'config/interfaces/general.interface';
 import useStyles from './styles';
 import {Fonts} from '@theme/index';
@@ -53,7 +59,7 @@ const Template: React.FC<PropsScreen> = props => {
           <Text style={Fonts.h2}>{t('template_title_Carousel')}</Text>
           <Carousel />
         </View>
-        <View style={[styles.section, {height: 300}]}>
+        <View style={[styles.section]}>
           <Text style={Fonts.h2}>{'<CheckBox />'}</Text>
           <CheckBox
             text="Check me!"
@@ -66,6 +72,10 @@ const Template: React.FC<PropsScreen> = props => {
             radio
             onPress={value => setChecked(value)}
           />
+        </View>
+        <View style={[styles.section]}>
+          <Text style={Fonts.h2}>{'<CodeInput />'}</Text>
+          <CodeInput numberOfDigits={6} onChange={v => console.log(v)} />
         </View>
       </ScrollView>
     </MainView>
