@@ -7,7 +7,7 @@ import {navigationRef} from 'config/utils/functions.utils';
 import StackNavigation from 'config/navigation/stack.navigation';
 
 import {I18nextProvider} from 'react-i18next';
-import localization from '@localization/i18n.config';
+import localization from 'config/locales/i18n.config';
 
 function App(): JSX.Element {
   return (

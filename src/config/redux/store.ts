@@ -1,9 +1,11 @@
 import {configureStore} from '@reduxjs/toolkit';
 import commonData from './commonDataSlice';
+import appNotification from 'components/Notification/.config/notificationSlice';
 
 export const store = configureStore({
   reducer: {
     commonData,
+    appNotification
   },
 });
 

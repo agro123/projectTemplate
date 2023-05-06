@@ -1,4 +1,4 @@
-import template from 'views/Template/lang/es';
+import template from 'views/Template/.config/lang/es';
 
 const common = {
   YES: 'Sí',
